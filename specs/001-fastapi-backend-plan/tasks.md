@@ -68,7 +68,7 @@ description: "Task list for FastAPI Backend + XR Integration Platform"
 
 ---
 
-## Phase 3: User Story 1 - VR Session Ingestion & Gateway Handshake (Priority: P1) 🎯 MVP
+## Phase 3: VR Session Ingestion & Gateway Handshake (Priority: P1) 🎯 MVP
 
 **Goal**: Ingest VR sessions/scans/events via REST/WebSocket, enforce JWT/rate limits, persist sessions, and acknowledge within SLA.
 
@@ -88,7 +88,7 @@ description: "Task list for FastAPI Backend + XR Integration Platform"
 
 ---
 
-## Phase 4: User Story 2 - Object Mapping & Robot Dispatch (Priority: P1)
+## Phase 4: Object Mapping & Robot Dispatch (Priority: P1)
 
 **Goal**: Normalize environment scans, map objects, enqueue dispatch tasks, and drive ROS2 Nav2 execution with telemetry.
 
@@ -108,7 +108,7 @@ description: "Task list for FastAPI Backend + XR Integration Platform"
 
 ---
 
-## Phase 5: User Story 3 - Data + Observability Layer (Priority: P2)
+## Phase 5: Data + Observability Layer (Priority: P2)
 
 **Goal**: Persist scans/embeddings/datasets in Postgres/Qdrant/MinIO and enable end-to-end observability.
 
@@ -127,7 +127,7 @@ description: "Task list for FastAPI Backend + XR Integration Platform"
 
 ---
 
-## Phase 6: User Story 4 - Quickstart & Orchestration (Priority: P3)
+## Phase 6: Quickstart & Orchestration (Priority: P3)
 
 **Goal**: Provide developer workflow scripts, CI harnesses, and parity documentation for consistent end-to-end runs.
 
