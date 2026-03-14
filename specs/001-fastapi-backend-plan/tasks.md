@@ -20,20 +20,20 @@ description: "Task list for FastAPI Backend + XR Integration Platform"
 
 **Purpose**: Project initialization and missing design artifacts required to drive implementation.
 
-- [ ] T001 Create consolidated entity definitions in specs/001-fastapi-backend-plan/data-model.md
-- [ ] T002 Create API gateway contract in specs/001-fastapi-backend-plan/contracts/api-gateway.md
-- [ ] T003 Create backend services contract in specs/001-fastapi-backend-plan/contracts/backend-services.md
-- [ ] T004 Create data layer contract in specs/001-fastapi-backend-plan/contracts/data-layer.md
-- [ ] T005 Create robot layer contract in specs/001-fastapi-backend-plan/contracts/robot-layer.md
-- [ ] T006 Create VR/game contract in specs/001-fastapi-backend-plan/contracts/vr-game.md
-- [ ] T007 Create environment setup guide in specs/001-fastapi-backend-plan/quickstart.md
-- [ ] T008 [P] Initialize FastAPI entrypoint in backend/api_gateway/app/main.py
-- [ ] T009 [P] Add base package scaffolds in backend/common/config/__init__.py
-- [ ] T010 [P] Add telemetry scaffold in backend/common/telemetry/__init__.py
-- [ ] T011 [P] Add client wrappers scaffold in backend/common/clients/__init__.py
-- [ ] T012 [P] Create ROS2 bridge package scaffold in robotics/ros2_bridge/__init__.py
-- [ ] T013 [P] Create VR simulator scaffold in vr-client/simulator/__init__.py
-- [ ] T014 [P] Add root test folders in tests/unit/.gitkeep
+- [x] T001 Create consolidated entity definitions in specs/001-fastapi-backend-plan/data-model.md
+- [x] T002 Create API gateway contract in specs/001-fastapi-backend-plan/contracts/api-gateway.md
+- [x] T003 Create backend services contract in specs/001-fastapi-backend-plan/contracts/backend-services.md
+- [x] T004 Create data layer contract in specs/001-fastapi-backend-plan/contracts/data-layer.md
+- [x] T005 Create robot layer contract in specs/001-fastapi-backend-plan/contracts/robot-layer.md
+- [x] T006 Create VR/game contract in specs/001-fastapi-backend-plan/contracts/vr-game.md
+- [x] T007 Create environment setup guide in specs/001-fastapi-backend-plan/quickstart.md
+- [x] T008 [P] Initialize FastAPI entrypoint in backend/api_gateway/app/main.py
+- [x] T009 [P] Add base package scaffolds in backend/common/config/__init__.py
+- [x] T010 [P] Add telemetry scaffold in backend/common/telemetry/__init__.py
+- [x] T011 [P] Add client wrappers scaffold in backend/common/clients/__init__.py
+- [x] T012 [P] Create ROS2 bridge package scaffold in robotics/ros2_bridge/__init__.py
+- [x] T013 [P] Create VR simulator scaffold in vr-client/simulator/__init__.py
+- [x] T014 [P] Add root test folders in tests/unit/.gitkeep
 
 ---
 
@@ -41,28 +41,28 @@ description: "Task list for FastAPI Backend + XR Integration Platform"
 
 **Purpose**: Core infrastructure that MUST be complete before ANY user story can be implemented.
 
-- [ ] T015 Implement environment config loader in backend/common/config/settings.py
-- [ ] T016 [P] Implement JWT auth utilities in backend/common/security/jwt.py
-- [ ] T017 [P] Implement rate limiting middleware in backend/api_gateway/app/middleware/rate_limit.py
-- [ ] T018 Implement shared exception handlers in backend/api_gateway/app/middleware/errors.py
-- [ ] T019 Implement OpenTelemetry setup in backend/common/telemetry/otel.py
-- [ ] T020 Implement Postgres engine/session factory in backend/data_layer/db/session.py
-- [ ] T021 [P] Implement Redis client wrapper in backend/common/clients/redis_client.py
-- [ ] T022 [P] Implement Qdrant client wrapper in backend/common/clients/qdrant_client.py
-- [ ] T023 [P] Implement MinIO client wrapper in backend/common/clients/minio_client.py
-- [ ] T024 Create base SQLAlchemy models in backend/data_layer/models/base.py
-- [ ] T025 [P] Add PlayerSession model in backend/data_layer/models/player_session.py
-- [ ] T026 [P] Add EnvironmentScan model in backend/data_layer/models/environment_scan.py
-- [ ] T027 [P] Add DispatchTask model in backend/data_layer/models/dispatch_task.py
-- [ ] T028 [P] Add RobotState model in backend/data_layer/models/robot_state.py
-- [ ] T029 [P] Add SceneEmbedding model in backend/data_layer/models/scene_embedding.py
-- [ ] T030 [P] Add DatasetArtifact model in backend/data_layer/models/dataset_artifact.py
-- [ ] T031 Implement repository base in backend/data_layer/repositories/base.py
-- [ ] T032 [P] Implement PlayerSession repository in backend/data_layer/repositories/player_sessions.py
-- [ ] T033 [P] Implement EnvironmentScan repository in backend/data_layer/repositories/environment_scans.py
-- [ ] T034 [P] Implement DispatchTask repository in backend/data_layer/repositories/dispatch_tasks.py
-- [ ] T035 Implement ROS2 bridge configuration in robotics/ros2_bridge/config.py
-- [ ] T036 Implement VR simulator event schema loader in vr-client/simulator/event_schema.py
+- [x] T015 Implement environment config loader in backend/common/config/settings.py
+- [x] T016 [P] Implement JWT auth utilities in backend/common/security/jwt.py
+- [x] T017 [P] Implement rate limiting middleware in backend/api_gateway/app/middleware/rate_limit.py
+- [x] T018 Implement shared exception handlers in backend/api_gateway/app/middleware/errors.py
+- [x] T019 Implement OpenTelemetry setup in backend/common/telemetry/otel.py
+- [x] T020 Implement Postgres engine/session factory in backend/data_layer/db/session.py
+- [x] T021 [P] Implement Redis client wrapper in backend/common/clients/redis_client.py
+- [x] T022 [P] Implement Qdrant client wrapper in backend/common/clients/qdrant_client.py
+- [x] T023 [P] Implement MinIO client wrapper in backend/common/clients/minio_client.py
+- [x] T024 Create base SQLAlchemy models in backend/data_layer/models/base.py
+- [x] T025 [P] Add PlayerSession model in backend/data_layer/models/player_session.py
+- [x] T026 [P] Add EnvironmentScan model in backend/data_layer/models/environment_scan.py
+- [x] T027 [P] Add DispatchTask model in backend/data_layer/models/dispatch_task.py
+- [x] T028 [P] Add RobotState model in backend/data_layer/models/robot_state.py
+- [x] T029 [P] Add SceneEmbedding model in backend/data_layer/models/scene_embedding.py
+- [x] T030 [P] Add DatasetArtifact model in backend/data_layer/models/dataset_artifact.py
+- [x] T031 Implement repository base in backend/data_layer/repositories/base.py
+- [x] T032 [P] Implement PlayerSession repository in backend/data_layer/repositories/player_sessions.py
+- [x] T033 [P] Implement EnvironmentScan repository in backend/data_layer/repositories/environment_scans.py
+- [x] T034 [P] Implement DispatchTask repository in backend/data_layer/repositories/dispatch_tasks.py
+- [x] T035 Implement ROS2 bridge configuration in robotics/ros2_bridge/config.py
+- [x] T036 Implement VR simulator event schema loader in vr-client/simulator/event_schema.py
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel.
 
@@ -74,15 +74,15 @@ description: "Task list for FastAPI Backend + XR Integration Platform"
 
 **Independent Test**: Run VR simulator to send a session + scan; verify ACK <150 ms and session persisted in Postgres/Redis with trace IDs.
 
-- [ ] T037 [P] [US1] Define session schemas in backend/api_gateway/app/schemas/sessions.py
-- [ ] T038 [P] [US1] Define VR event schemas in backend/api_gateway/app/schemas/vr_events.py
-- [ ] T039 [US1] Implement session REST routes in backend/api_gateway/app/routes/sessions.py
-- [ ] T040 [US1] Implement WebSocket handshake/ack in backend/api_gateway/app/routes/ws_sessions.py
-- [ ] T041 [US1] Implement session service in backend/api_gateway/app/services/session_service.py
-- [ ] T042 [US1] Implement session persistence in backend/data_layer/repositories/player_sessions.py
-- [ ] T043 [US1] Implement VR event ingestion pipeline in backend/api_gateway/app/services/vr_event_ingest.py
-- [ ] T044 [US1] Implement Redis stream publisher for events in backend/common/clients/redis_client.py
-- [ ] T045 [US1] Add UX parity checklist updates in docs/ux-parity.md
+- [x] T037 [P] [US1] Define session schemas in backend/api_gateway/app/schemas/sessions.py
+- [x] T038 [P] [US1] Define VR event schemas in backend/api_gateway/app/schemas/vr_events.py
+- [x] T039 [US1] Implement session REST routes in backend/api_gateway/app/routes/sessions.py
+- [x] T040 [US1] Implement WebSocket handshake/ack in backend/api_gateway/app/routes/ws_sessions.py
+- [x] T041 [US1] Implement session service in backend/api_gateway/app/services/session_service.py
+- [x] T042 [US1] Implement session persistence in backend/data_layer/repositories/player_sessions.py
+- [x] T043 [US1] Implement VR event ingestion pipeline in backend/api_gateway/app/services/vr_event_ingest.py
+- [x] T044 [US1] Implement Redis stream publisher for events in backend/common/clients/redis_client.py
+- [x] T045 [US1] Add UX parity checklist updates in docs/ux-parity.md
 
 **Checkpoint**: User Story 1 functional and independently testable.
 
