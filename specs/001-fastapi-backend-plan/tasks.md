@@ -76,9 +76,15 @@ description: "Task list for FastAPI Backend + XR Integration Platform"
 
 ### Tests for User Story 1 (TDD-first)
 
+> **Execution note (2026-03-14)**: pytest could not be executed because no Python environment with pip/pytest was available (no `python`, missing `pip`, and no venv at `/home/cluster/venv` or `/home/cluster/.venv`). Test execution tasks below remain blocked until a runnable Python env is provided.
+
 - [ ] T037 [P] [US1] Write failing FastAPI REST/WebSocket contract tests in tests/integration/test_session_contracts.py and document the `pytest tests/integration/test_session_contracts.py` command in specs/001-fastapi-backend-plan/quickstart.md
 - [ ] T038 [P] [US1] Write failing VR event ingestion unit tests covering Redis publishing in tests/unit/test_vr_event_ingest.py (pytest)
 - [ ] T039 [P] [US1] Write failing VR simulator handshake integration test invoking `python vr-client/simulator/run_sim.py --session` via tests/integration/test_vr_simulator_flow.py to assert ACK latency
+- [ ] T087 [US1] Execute `pytest tests/integration/test_session_contracts.py` (expect fail pre-implementation) and capture failure reason
+- [ ] T088 [US1] Execute `pytest tests/unit/test_vr_event_ingest.py` (expect fail pre-implementation) and capture failure reason
+- [ ] T089 [US1] Execute `pytest tests/integration/test_vr_simulator_flow.py` (expect fail pre-implementation) and capture failure reason
+- [ ] T090 [US1] Independent acceptance check: run `python vr-client/simulator/run_sim.py --session` against a running gateway and verify ACK <150 ms with session persisted in Postgres + Redis and trace IDs present
 
 ### Implementation for User Story 1
 
@@ -108,6 +114,10 @@ description: "Task list for FastAPI Backend + XR Integration Platform"
 - [ ] T050 [P] [US2] Write failing robot dispatcher queue integration tests in tests/integration/test_dispatch_queue.py asserting Redis + Postgres side effects via `pytest tests/integration/test_dispatch_queue.py`
 - [ ] T051 [US2] Author ROS2 Nav2 launch test harness in robotics/tests/test_dispatch_launch.py that runs `ros2 launch robotics/nav2_launch/dispatch_sim.launch.py` and Gazebo (fail first)
 - [ ] T052 [US2] Document ROS2/Gazebo regression command sequence (`ros2 test robotics/ros2_bridge dispatch_launch.test.py`) in specs/001-fastapi-backend-plan/quickstart.md before implementation
+- [ ] T091 [US2] Execute `pytest tests/unit/test_object_mapping_handler.py` (expect fail pre-implementation) and capture failure reason
+- [ ] T092 [US2] Execute `pytest tests/integration/test_dispatch_queue.py` (expect fail pre-implementation) and capture failure reason
+- [ ] T093 [US2] Execute ROS2/Gazebo regression command sequence `ros2 test robotics/ros2_bridge dispatch_launch.test.py` (expect fail pre-implementation) and capture failure reason
+- [ ] T094 [US2] Independent acceptance check: run Gazebo dispatch via `ros2 launch robotics/nav2_launch/dispatch_sim.launch.py` and verify dispatch <2 s and telemetry interval <500 ms with collision avoidance ≥98%
 
 ### Implementation for User Story 2
 
@@ -136,6 +146,10 @@ description: "Task list for FastAPI Backend + XR Integration Platform"
 - [ ] T062 [P] [US3] Write failing Qdrant collection integration tests in tests/integration/test_qdrant_embeddings.py that run via `pytest tests/integration/test_qdrant_embeddings.py`
 - [ ] T063 [P] [US3] Write failing MinIO dataset writer unit tests in tests/unit/test_dataset_artifacts.py using MinIO moto mocks
 - [ ] T064 [US3] Write failing telemetry correlation unit tests in tests/unit/test_request_id_middleware.py ensuring otel span IDs propagate end-to-end
+- [ ] T095 [US3] Execute `pytest tests/integration/test_qdrant_embeddings.py` (expect fail pre-implementation) and capture failure reason
+- [ ] T096 [US3] Execute `pytest tests/unit/test_dataset_artifacts.py` (expect fail pre-implementation) and capture failure reason
+- [ ] T097 [US3] Execute `pytest tests/unit/test_request_id_middleware.py` (expect fail pre-implementation) and capture failure reason
+- [ ] T098 [US3] Independent acceptance check: upload dataset artifacts to MinIO and query embeddings from Qdrant with traces visible in Tempo/Grafana
 
 ### Implementation for User Story 3
 
@@ -163,6 +177,10 @@ description: "Task list for FastAPI Backend + XR Integration Platform"
 - [ ] T073 [P] [US4] Write failing quickstart CLI integration test in tests/integration/test_quickstart_flow.py invoking documented commands
 - [ ] T074 [P] [US4] Write failing end-to-end simulation regression test in tests/integration/test_e2e_sim.py executing `bash scripts/run-e2e-sim.sh`
 - [ ] T075 [US4] Extend robotics/tests/run_sim_smoke.py to assert Gazebo success by launching `ros2 launch robotics/nav2_launch/dispatch_sim.launch.py` before implementation
+- [ ] T099 [US4] Execute `pytest tests/integration/test_quickstart_flow.py` (expect fail pre-implementation) and capture failure reason
+- [ ] T100 [US4] Execute `pytest tests/integration/test_e2e_sim.py` (expect fail pre-implementation) and capture failure reason
+- [ ] T101 [US4] Execute `python robotics/tests/run_sim_smoke.py` (expect fail pre-implementation) and capture failure reason
+- [ ] T102 [US4] Independent acceptance check: follow quickstart end-to-end (services → simulator → mapping → dispatch) and record success criteria
 
 ### Implementation for User Story 4
 
