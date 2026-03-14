@@ -15,3 +15,7 @@ def configure_tracing(service_name: str) -> None:
     processor = BatchSpanProcessor(exporter)
     provider.add_span_processor(processor)
     trace.set_tracer_provider(provider)
+
+
+def get_tracer(name: str):
+    return trace.get_tracer(name)

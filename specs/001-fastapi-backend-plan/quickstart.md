@@ -35,6 +35,12 @@ ros2 run ros2_bridge dispatch_node
 python vr-client/simulator/run_sim.py --session
 ```
 
+## Run E2E Script
+
+```bash
+bash scripts/run-e2e-sim.sh
+```
+
 ## Tests
 
 ```bash

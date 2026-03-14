@@ -94,15 +94,15 @@ description: "Task list for FastAPI Backend + XR Integration Platform"
 
 **Independent Test**: Use Gazebo to execute a dispatch task; verify dispatch <2 s and telemetry interval <500 ms with collision avoidance ≥98%.
 
-- [ ] T046 [P] [US2] Implement mapping request schemas in backend/services/object_mapping/schemas.py
-- [ ] T047 [US2] Implement mapping service client in backend/services/object_mapping/client.py
-- [ ] T048 [US2] Implement dispatch queue interface in backend/services/robot_dispatcher/queue.py
-- [ ] T049 [US2] Implement dispatch task creator in backend/services/robot_dispatcher/service.py
-- [ ] T050 [US2] Implement ROS2 dispatch node in robotics/ros2_bridge/dispatch_node.py
-- [ ] T051 [US2] Implement ROS2 telemetry fan-out in robotics/ros2_bridge/telemetry_node.py
-- [ ] T052 [US2] Add Gazebo launch configuration in robotics/nav2_launch/dispatch_sim.launch.py
-- [ ] T053 [US2] Implement dispatch task persistence in backend/data_layer/repositories/dispatch_tasks.py
-- [ ] T054 [US2] Wire object mapping flow in backend/services/object_mapping/handler.py
+- [x] T046 [P] [US2] Implement mapping request schemas in backend/services/object_mapping/schemas.py
+- [x] T047 [US2] Implement mapping service client in backend/services/object_mapping/client.py
+- [x] T048 [US2] Implement dispatch queue interface in backend/services/robot_dispatcher/queue.py
+- [x] T049 [US2] Implement dispatch task creator in backend/services/robot_dispatcher/service.py
+- [x] T050 [US2] Implement ROS2 dispatch node in robotics/ros2_bridge/dispatch_node.py
+- [x] T051 [US2] Implement ROS2 telemetry fan-out in robotics/ros2_bridge/telemetry_node.py
+- [x] T052 [US2] Add Gazebo launch configuration in robotics/nav2_launch/dispatch_sim.launch.py
+- [x] T053 [US2] Implement dispatch task persistence in backend/data_layer/repositories/dispatch_tasks.py
+- [x] T054 [US2] Wire object mapping flow in backend/services/object_mapping/handler.py
 
 **Checkpoint**: User Story 2 functional and independently testable.
 
@@ -114,14 +114,14 @@ description: "Task list for FastAPI Backend + XR Integration Platform"
 
 **Independent Test**: Upload dataset artifacts to MinIO and query embeddings from Qdrant with traces visible in Tempo/Grafana.
 
-- [ ] T055 [P] [US3] Implement Qdrant collection setup in backend/common/clients/qdrant_client.py
-- [ ] T056 [US3] Implement embedding write/read service in backend/services/object_mapping/embeddings.py
-- [ ] T057 [US3] Implement MinIO dataset writer in backend/common/clients/minio_client.py
-- [ ] T058 [US3] Implement dataset retention job in data-agent-pipelines/retention/cleanup.py
-- [ ] T059 [US3] Implement OpenTelemetry exporter wiring in backend/common/telemetry/otel.py
-- [ ] T060 [US3] Add trace correlation IDs in backend/api_gateway/app/middleware/request_id.py
-- [ ] T061 [US3] Implement environment scan persistence in backend/data_layer/repositories/environment_scans.py
-- [ ] T062 [US3] Implement scene embedding persistence in backend/data_layer/repositories/scene_embeddings.py
+- [x] T055 [P] [US3] Implement Qdrant collection setup in backend/common/clients/qdrant_client.py
+- [x] T056 [US3] Implement embedding write/read service in backend/services/object_mapping/embeddings.py
+- [x] T057 [US3] Implement MinIO dataset writer in backend/common/clients/minio_client.py
+- [x] T058 [US3] Implement dataset retention job in data-agent-pipelines/retention/cleanup.py
+- [x] T059 [US3] Implement OpenTelemetry exporter wiring in backend/common/telemetry/otel.py
+- [x] T060 [US3] Add trace correlation IDs in backend/api_gateway/app/middleware/request_id.py
+- [x] T061 [US3] Implement environment scan persistence in backend/data_layer/repositories/environment_scans.py
+- [x] T062 [US3] Implement scene embedding persistence in backend/data_layer/repositories/scene_embeddings.py
 
 **Checkpoint**: User Story 3 functional and independently testable.
 
@@ -133,12 +133,12 @@ description: "Task list for FastAPI Backend + XR Integration Platform"
 
 **Independent Test**: Follow quickstart to boot services and run simulator → mapping → dispatch flow end-to-end.
 
-- [ ] T063 [P] [US4] Add Docker compose stack in infra/docker-compose.yml
-- [ ] T064 [US4] Implement CI harness script in scripts/run-e2e-sim.sh
-- [ ] T065 [US4] Add VR simulator workflow runner in vr-client/simulator/run_sim.py
-- [ ] T066 [US4] Add ROS2 + Gazebo smoke runner in robotics/tests/run_sim_smoke.py
-- [ ] T067 [US4] Document end-to-end workflow in specs/001-fastapi-backend-plan/quickstart.md
-- [ ] T068 [US4] Finalize UX parity checklist results in docs/ux-parity.md
+- [x] T063 [P] [US4] Add Docker compose stack in infra/docker-compose.yml
+- [x] T064 [US4] Implement CI harness script in scripts/run-e2e-sim.sh
+- [x] T065 [US4] Add VR simulator workflow runner in vr-client/simulator/run_sim.py
+- [x] T066 [US4] Add ROS2 + Gazebo smoke runner in robotics/tests/run_sim_smoke.py
+- [x] T067 [US4] Document end-to-end workflow in specs/001-fastapi-backend-plan/quickstart.md
+- [x] T068 [US4] Finalize UX parity checklist results in docs/ux-parity.md
 
 **Checkpoint**: User Story 4 functional and independently testable.
 
